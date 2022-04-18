@@ -1,7 +1,11 @@
 const button = document.querySelector("button");
+// show image button
 const authorSpan = document.querySelector(".author");
+// h3 span 
 const imgDiv = document.querySelector(".image-container");
+// container/div for image
 const img = document.querySelector(".img");
+// img element
 
 const getImage = async function () {
 	const res = await fetch ("https://picsum.photos/v2/list?limit=100");
@@ -14,7 +18,9 @@ const getImage = async function () {
 
 const selectRandomImage = function (images) {
 	const randomIndex = Math.floor(Math.random() * images.length);
+	//console.log(randomIndex);
 	const randomImage = images[randomIndex];
+	//console.log(randomImage);
 	displayImage (randomImage);
 };
 
